@@ -1,0 +1,21 @@
+extends ../layouts/common
+
+block content
+  h1 Transactions
+  a(class="navbar-brand", href="/transactions/create") Create
+  ul
+    each item in transactions
+      li
+        span Id:
+        span &nbsp;
+        span= item.id
+        br
+        span User Id:
+        span &nbsp;
+        span= item.userId
+        br
+        span Book Id:
+        span &nbsp;
+        span= item.bookId
+        br
+        a(class="navbar-brand", href="/transactions/" + item.id + "/complete") Hoàn thành

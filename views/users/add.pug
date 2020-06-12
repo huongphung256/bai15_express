@@ -1,0 +1,14 @@
+extends ../layouts/common
+
+block content
+  h1 Add User
+
+  if error
+    .alert.alert-danger= error
+  form(action="/users/add", method="POST")
+    div
+      label Name
+      span &nbsp;
+      input(type="text", name="name")
+      
+    button Add

@@ -1,0 +1,16 @@
+extends ../layouts/common
+
+block content
+  h1 Book List
+
+  a(href="/books/add") Thêm sách
+
+  ul
+    each item in books
+      li
+        span= item.title
+        span &nbsp;
+        a(href="/books/" + item.id + "/delete") Xóa
+        span &nbsp;
+        a(href="/books/" + item.id + "/update") Update
+      

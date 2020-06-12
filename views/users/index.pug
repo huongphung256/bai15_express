@@ -1,0 +1,14 @@
+extends ../layouts/common
+
+block content
+  h1 User List
+
+  ul
+    each item in users
+      li
+        span= item.name
+        span &nbsp;
+        a(href="/users/" + item.id + "/delete") Xóa
+        span &nbsp;
+        a(href="/users/" + item.id + "/update") Update
+      
